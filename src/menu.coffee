@@ -1,12 +1,11 @@
 # Description
-#   Lunches near domaniewska
+#   Lunches near domaniewska, Warsaw
 #
 # Configuration:
 #   LIST_OF_ENV_VARS_TO_SET
 #
 # Commands:
-#   hubot hello - <what the respond trigger does>
-#   orly - <what the hear trigger does>
+#   hubot menu
 #
 # Notes:
 #   <optional notes required for the script>
