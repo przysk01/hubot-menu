@@ -1,11 +1,19 @@
 language: node_js
 node_js:
-  - "0.12"
-  - "0.10"
-  - "iojs"
+- '0.12'
+- '0.10'
+- iojs
 sudo: false
 cache:
   directories:
-    - node_modules
+  - node_modules
 notifications:
   email: false
+deploy:
+  provider: npm
+  email: kaka13x@gmail.com
+  api_key:
+    secure: YmpMA2lWEkMGTUOXe+lU58STysr9uu4kJXvkkaG+377qfksixBQZAScG/C0iW1WADKs3YpBRm8EFwLKrmn8DAaIWRBY3LzyDICoz+Q5DQ1EXC+3StyFO94hQqdZjQIgPCDHdQvfrLBWVQ9OqkVSpIWKXydCAucOGnyyiwJKPzRR5Fj8DmN0egGlYvPyaxJrNjBU02Gb0xjE+rqKMyt/LYniT4SY6CwVWrL0TraBgjunYvuP7f2JnzatRLkqT3GApo56+aS/rsLX94DcYxGjFUEXuHe+SMwVTx6+7pv1V0nrLu8G5p8il8J6NkWchzAQY/8sB7w8bi16P1QwO3blM1u94VAKtH7/99QbcetB0Ri6BilAlC1NcK3Ck6Jht/wUx5ZdclsoI3lC4HFXIHdBrwxtmPO8LhQGmtz6bIWf1OiLmJe3sw3YipeMngHTLmJ3F1EhpX+Icjt/oEfN/m1d5O5B14ByuMSyLJ4XRn3fUE0xCVLczMwgEDbf+7kYYVvXxrSx5x1VMDCqeQEs+XgUj5/2BTFF0ouZ3O7Gq8UBgQQcNPn1t49bdcRscBU/um353wXPtKEBVq7TEWRXpyohcp7OPR25TQ6RrRJOBT+76auZXCboMGPpJLyJ9flCRfXaWHat1FxQnNOpMnfZrkRqWLP0WhaIHkf8DyopuiVLx2y8=
+  on:
+    tags: true
+    repo: przysk01/hubot-menu
