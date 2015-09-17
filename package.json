@@ -1,7 +1,7 @@
 {
   "name": "hubot-menu",
   "description": "Lunches near domaniewska",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Konrad Przysucha <przysk01@stepstone.com>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts",
