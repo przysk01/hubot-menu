@@ -44,6 +44,7 @@ module.exports = (robot) ->
       .get() (err, res, body) ->
         handler = new HtmlParser.DefaultHandler()
         parser  = new HtmlParser.Parser handler
+        res.setEncoding("UTF-8")
         parser.parseComplete body
         title = (Select handler.dom, "title")[0]
         menu = (Select handler.dom, "#natekst p")
@@ -52,12 +53,11 @@ module.exports = (robot) ->
         while i < menu.length
         	if /strong/i.test(menu[i].children[0].raw)
          		for d, j in menu[i].children[0].children
-         			if d.type == 'text'
-         				msg.send d.raw.replace /^\s+|\s+$/g, ""
-         		#msg.send menu[i].children[0].children[0].raw
+         			if d.type == 'text' 
+         				msg.send d.raw.replace /^\s+|\s+$/g, ""         				
          	else
          		for d, j in menu[i].children
-         			if d.type == 'text'
+         			if d.type == 'text' && !/\n+$/.test(d.raw)
          				msg.send d.raw.replace /^\s+|\s+$/g, ""
          			else 
          				if d.children
